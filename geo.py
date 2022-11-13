@@ -1,8 +1,9 @@
 import pandas as pd
+import json
 from openpyxl import Workbook
-from MapBase import request_geo
+from MapBase import request_geo, json_key
 
-json_key = './vworld_key.json' # vworld key가 저장된 json파일명(경로 포함)
+key = json_key('./vworld_key.json') # vworld key가 저장된 json파일명(경로 포함)
 
 geo = pd.read_csv('seoul_school_address.csv') # 엑셀 파일 불러오기 및 정리
 
@@ -15,7 +16,7 @@ sheet = wb.active
 for num, value in enumerate(address_list):
     addr = value
     # print(addr)
-    x, y = request_geo(addr, json_key) # API를 활용하여 주소를 좌표로 변환
+    x, y = request_geo(addr, key) # API를 활용하여 주소를 좌표로 변환
     sheet.append([highschool_list[num], addr, x, y]) # 학교명, 도로명주소, x(경도),  y(위도)의 순서대로 엑셀에 저장
 
   

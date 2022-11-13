@@ -3,6 +3,13 @@ from openpyxl import load_workbook
 from openpyxl import Workbook
 import folium
 import requests
+import json
+
+def json_key(json_name):
+    client = None
+    with open(json_name,"r") as clientJson :
+        client = json.load(clientJson)
+    return client["key"] 
 
 def request_geo(road, primary_key): # 주소를 x, y좌표로 반환해주는 함수 -> API에 접속하여 x, y 부분만 분리하여 반환
     # VWORLD API 접속 관련 내용 
