@@ -1,8 +1,4 @@
 venv/
 __pycache__/
-2023 아현 정시 합격자.xlsx
-2023 은평 정시 합격자.xlsx
-2023 종로 정시 합격자.xlsx
-2023_ahyeon.html
-2023_empyeong.html
-2023_jongno.html
+*.xlsx
+*.html
