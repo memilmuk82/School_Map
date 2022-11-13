@@ -23,4 +23,3 @@ map4 = folium.Map(location=[37.55,126.98], zoom_start=12) # 기본맵 설정
 SchoolData4 = pre_Data('jongno.csv', '종로', '정시')
 map4 = Map_Data(Merge_Data(SchoolData4), map4, "#FF1E1E", "#FF1E1E", 0.3, 1)
 map4.save('2023_jongno.html') # html 파일로 저장 / map.save('파일명.html')
-
