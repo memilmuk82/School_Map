@@ -2,3 +2,4 @@ venv/
 __pycache__/
 *.xlsx
 *.html
+School_Map/geumcheon.csv:Zone.Identifier
