@@ -17,7 +17,7 @@ map2.save('2023_enpyeong.html') # html 파일로 저장 / map.save('파일명.ht
 map3 = folium.Map(location=[37.55,126.98], zoom_start=12) # 기본맵 설정
 SchoolData3 = pre_Data('geumcheon.csv', '금천', '정시')
 map3 = Map_Data(Merge_Data(SchoolData3), map3, "#7900FF", "#7900FF", 0.3, 1)
-map3.save('2023_jongno.html') # html 파일로 저장 / map.save('파일명.html')
+map3.save('2023_geumcheon.html') # html 파일로 저장 / map.save('파일명.html')
 
 map4 = folium.Map(location=[37.55,126.98], zoom_start=12) # 기본맵 설정
 SchoolData4 = pre_Data('jongno.csv', '종로', '정시')
