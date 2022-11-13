@@ -3,3 +3,4 @@ __pycache__/
 *.xlsx
 *.html
 *.csv:Zone.Identifier
+*.py:Zone.Identifier
