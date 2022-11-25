@@ -40,7 +40,7 @@ map = folium.Map(location=[37.55,126.98], zoom_start=12) # 기본맵 설정
 #map = Map_Data(Merge_Data(SchoolData), map, "#FF1E1E", "#FF1E1E", 0.3, 1) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0))
 
 SchoolName = 'seocho'
-deptname = '미디어콘텐츠과'
+deptname = '카페베이커리과'
 dept_Data(f'./data/{SchoolName}.csv', SchoolName, deptname)  #특정 학과의 학교별 모집현황 파일 출력
 SchoolData = pre_Data(f'./csv/{SchoolName}_{deptname}.csv') # 학교 데이터 입력 / pre_Data('파일명.csv', '학교명', '정시 또는 추가')
 map = Map_Data(Merge_Data(SchoolData), map, "#764AF1", "#764AF1", 0.5, 1) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0)) 
