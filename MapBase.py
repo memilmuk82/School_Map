@@ -40,11 +40,11 @@ def pre_Data(FileName):
     Enrollment = Enrollment.sort_values('학교명').reset_index(drop=True) # 학교명으로 정렬
     return Enrollment
 
-def dept_Data(FileName, DeptName): #특정 학과의 학교별 모집현황 파일 출력
-    df = pd.read_csv(f'{FileName}.csv')
+def dept_Data(FileName, SchoolName, DeptName): #특정 학과의 학교별 모집현황 파일 출력
+    df = pd.read_csv(FileName)
     department = df.loc[(df['지원학과'] == DeptName)]
     department = department.sort_values('학교명').reset_index(drop=True) # 학교명으로 정렬
-    department.to_csv(f'./csv/{FileName}_{DeptName}.csv')
+    department.to_csv(f'./csv/{SchoolName}_{DeptName}.csv')
     if ( __name__ == "__main__" ) :
         print(department.head())
     return department

@@ -33,17 +33,16 @@ map = folium.Map(location=[37.55,126.98], zoom_start=12) # 기본맵 설정
 #SchoolData = pre_Data(f'{schoolname}_{deptname}.csv', schoolname, deptname) # 학교 데이터 입력 / pre_Data('파일명.csv', '학교명', '정시 또는 추가')
 #map = Map_Data(Merge_Data(SchoolData), map, "#7900FF", "#7900FF", 0.5, 0) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0)) 
 
-schoolname = 'jongno'
-deptname = '관광일본어과'
-dept_Data(schoolname, deptname)  #특정 학과의 학교별 모집현황 파일 출력
-SchoolData = pre_Data(f'./csv/{schoolname}_{deptname}.csv', schoolname, deptname) # 학교 데이터 입력 / pre_Data('파일명.csv', '학교명', '정시 또는 추가')
-map = Map_Data(Merge_Data(SchoolData), map, "#FF1E1E", "#FF1E1E", 0.3, 1) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0))
-
 #schoolname = 'jongno'
-#deptname = '항공서비스과'
+#deptname = '관광일본어과'
 #dept_Data(schoolname, deptname)  #특정 학과의 학교별 모집현황 파일 출력
-#SchoolData = pre_Data(f'{schoolname}_{deptname}.csv', schoolname, deptname) # 학교 데이터 입력 / pre_Data('파일명.csv', '학교명', '정시 또는 추가')
-#map = Map_Data(Merge_Data(SchoolData), map, "#FF1E1E", "#FF1E1E", 0.3, 1) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0)) 
+#SchoolData = pre_Data(f'./csv/{schoolname}_{deptname}.csv', schoolname, deptname) # 학교 데이터 입력 / pre_Data('파일명.csv', '학교명', '정시 또는 추가')
+#map = Map_Data(Merge_Data(SchoolData), map, "#FF1E1E", "#FF1E1E", 0.3, 1) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0))
 
+SchoolName = 'seocho'
+deptname = '미디어콘텐츠과'
+dept_Data(f'./data/{SchoolName}.csv', SchoolName, deptname)  #특정 학과의 학교별 모집현황 파일 출력
+SchoolData = pre_Data(f'./csv/{SchoolName}_{deptname}.csv') # 학교 데이터 입력 / pre_Data('파일명.csv', '학교명', '정시 또는 추가')
+map = Map_Data(Merge_Data(SchoolData), map, "#764AF1", "#764AF1", 0.5, 1) # Map_Data(Merge_Data(SchoolData), map, '외곽선 색', '채우기 색', 투명도(0.0 ~ 1.0), 팝업표시(표시:1, 미표시:0)) 
 
-map.save('./html/관광일본과_정시모집_지도.html') # html 파일로 저장 / map.save('파일명.html')
+map.save(f'./html/{SchoolName}_{deptname}_map.html') # html 파일로 저장 / map.save('파일명.html')
