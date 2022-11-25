@@ -14,7 +14,7 @@ map = Map_Data(Merge_Data(SchoolData), map, "#541212", "#541212", 0.5, 0)
 
 schoolname = './data/geumcheon.csv' 
 SchoolData = pre_Data(schoolname)
-map = Map_Data(Merge_Data(SchoolData), map, "#7900FF", "#7900FF", 0.5, 0)
+map = Map_Data(Merge_Data(SchoolData), map, "#3A6351", "#3A6351", 0.5, 0)
 
 schoolname = './data/seocho.csv' 
 SchoolData = pre_Data(schoolname)

@@ -18,7 +18,7 @@ map2.save('./html/2023_enpyeong.html') # html 파일로 저장 / map.save('파�
 schoolname3 = './data/geumcheon.csv'
 map3 = folium.Map(location=[37.55,126.98], zoom_start=12) # 기본맵 설정
 SchoolData3 = pre_Data(schoolname3)
-map3 = Map_Data(Merge_Data(SchoolData3), map3, "#7900FF", "#7900FF", 0.3, 1)
+map3 = Map_Data(Merge_Data(SchoolData3), map3, "#3A6351", "#3A6351", 0.3, 1)
 map3.save('./html/2023_geumcheon.html') # html 파일로 저장 / map.save('파일명.html')
 
 schoolname4 = './data/seocho.csv'
